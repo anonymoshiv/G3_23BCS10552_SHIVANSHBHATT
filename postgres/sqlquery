@@ -1,0 +1,23 @@
+--G3 23BCS10552_shivansh SESSION-1
+
+CREATE TABLE employees (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50),
+    salary INT
+);
+INSERT INTO employees (name, salary) VALUES
+('shivansh', 50000),
+('tushar', 60000),
+('geetansh', 55000),
+('chandan', 60000),
+('Isha', 45000),
+('Farhan', 70000),
+('Gauri', 50000),
+('Harsh', 80000),
+('Ishan', 75000);
+
+
+SELECT DISTINCT salary
+FROM employees
+ORDER BY salary DESC
+OFFSET 2 LIMIT 1;   -- 3rd highest → OFFSET N-1
